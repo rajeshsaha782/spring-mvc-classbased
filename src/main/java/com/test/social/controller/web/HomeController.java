@@ -1,4 +1,4 @@
-package com.test.social.controller;
+package com.test.social.controller.web;
 
 
 import org.springframework.stereotype.Controller;
