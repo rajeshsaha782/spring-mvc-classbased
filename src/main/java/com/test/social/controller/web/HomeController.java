@@ -13,12 +13,12 @@ public class HomeController {
     @RequestMapping("")
     public String index(Model model){
         model.addAttribute("name","Rajesh");
-        return "home-index";
+        return "home/index";
     }
 
     @RequestMapping("/test")
     public ModelAndView test(){
-        ModelAndView modelAndView = new ModelAndView("home-index");
+        ModelAndView modelAndView = new ModelAndView("home/index");
         modelAndView.addObject("name","WSIT");
         return modelAndView;
     }
