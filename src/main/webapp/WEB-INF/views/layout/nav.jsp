@@ -1,4 +1,4 @@
-<%--
+    <%@ page import="com.test.social.UserSessionManager" %><%--
   Created by IntelliJ IDEA.
   User: rajesh
   Date: 7/18/19
@@ -23,10 +23,18 @@
     <ul class="nav navbar-nav">
     <li><a href="#about">About</a>
     </li>
-    <li><a href="#services">Services</a>
+        <%  if (session.getAttribute("user") == null) { %>
+    <li><a href="/signup">SignUp</a>
     </li>
-    <li><a href="#contact">Contact</a>
+    <li><a href="/login">Login</a>
     </li>
+        <% } %>
+
+            <%  if (session.getAttribute("user") != null) { %>
+    <li><a href="/profile">${email}</a></li>
+    <li><a href="/logout">Logout</a></li>
+            <% } %>
+
     </ul>
     </div>
     <!-- /.navbar-collapse -->
