@@ -38,12 +38,15 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         String[] excludeMappingUrls = new String[]{
+                "/resources/**",
                 "",
                 "/",
                 "/login",
                 "/signup"
         };
-        registry.addInterceptor(authInterceptor()).addPathPatterns("/**")
+        registry.addInterceptor(authInterceptor())
+                .addPathPatterns("/**")
+                .addPathPatterns("/api/**")
                 .excludePathPatterns(excludeMappingUrls);
     }
 }

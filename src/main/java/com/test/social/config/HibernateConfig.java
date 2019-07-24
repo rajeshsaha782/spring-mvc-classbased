@@ -31,6 +31,7 @@ public class HibernateConfig {
         Properties props = new Properties();
         props.put("hibernate.show_sql", environment.getProperty("hibernate.show_sql"));
         props.put("hibernate.hbm2ddl.auto", environment.getProperty("hibernate.hbm2ddl.auto"));
+//        props.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5InnoDBDialect");
 
         factoryBean.setHibernateProperties(props);
         factoryBean.setPackagesToScan(

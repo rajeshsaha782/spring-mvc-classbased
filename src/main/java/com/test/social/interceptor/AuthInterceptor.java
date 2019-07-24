@@ -23,7 +23,7 @@ public class AuthInterceptor implements HandlerInterceptor {
         System.out.println("Pre Handle!!");
 
         String path = new URL(request.getRequestURL().toString()).getPath();
-        System.out.println("path----> "+path);
+        System.out.print("path----> "+path);
 //        for(String url:excludeMappingUrls){
 //            if(url.contains(path)){
 ////                System.out.println("excludeMapping--->"+path);
@@ -32,9 +32,11 @@ public class AuthInterceptor implements HandlerInterceptor {
 //        }
         User user = UserSessionManager.getSessionUser(request);
         if(user==null){
+            System.out.println(" ---> Block");
             response.sendRedirect("/");
             return false;
         }
+        System.out.println(" ---> Pass");
         return true;
     }
 
