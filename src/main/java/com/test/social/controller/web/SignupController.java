@@ -24,7 +24,7 @@ public class SignupController {
     }
 
     @RequestMapping(value = "/signup", method = RequestMethod.POST)
-    public String loginPost(@Valid SignupForm signupForm, BindingResult result, Model model,
+    public String loginPost(@ModelAttribute("signupForm") @Valid SignupForm signupForm, BindingResult result, Model model,
                             HttpServletRequest request){
         if(result.hasErrors())
         {

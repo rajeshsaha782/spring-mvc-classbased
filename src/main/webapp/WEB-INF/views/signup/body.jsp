@@ -15,7 +15,7 @@
     <div class="col-lg-12">
         <div class="mt-5">
             <div style="text-align: center;" class="card-header">
-                <h3>Sign ip</h3>
+                <h3>Sign up</h3>
                 <p class="error">${errMessage}</p>
             </div>
         </div>

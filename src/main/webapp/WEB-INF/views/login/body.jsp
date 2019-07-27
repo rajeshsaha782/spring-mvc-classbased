@@ -16,6 +16,7 @@
         <div class="mt-5">
             <div style="text-align: center;" class="card-header">
                 <h3>Sign in</h3>
+                <p class="error">${errMessage}</p>
             </div>
         </div>
     </div>
@@ -29,17 +30,14 @@
                         <label style="" for="inputEmail">Email address</label>
 
                         <form:input path="email" id="inputEmail" class="form-control" placeholder="Email address"/>
-                        <br><form:errors path="email" cssClass="error"/>
+                        <form:errors path="email" cssClass="error"/>
 <%--                        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required>--%>
 
                     </div>
-
-                    <hr>
-
                     <div class="form-label-group">
                         <label style="" for="inputPassword">Password</label>
                         <form:password path="password" id="inputPassword" name="password" class="form-control" placeholder="Password"/>
-                        <br><form:errors path="password" cssClass="error"/>
+                        <form:errors path="password" cssClass="error"/>
 <%--                        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>--%>
 
                     </div>
