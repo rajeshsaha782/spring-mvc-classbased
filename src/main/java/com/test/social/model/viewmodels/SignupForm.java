@@ -1,15 +1,17 @@
 package com.test.social.model.viewmodels;
 
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class SignupForm {
 
-    @Size(min=1,message = "Name is required!")
+//    @Size(min=1,message = "Name is required!")
+    @NotEmpty(message = "Name is required!!")
     private String name;
 
-    @Size(min=1,message = "Email is required!")
+    @NotEmpty(message = "Email is required!")
     @Pattern(regexp = "^[a-zA-Z0-9]+([._-][a-zA-Z0-9]+)*@[a-zA-Z0-9]{2,50}([.][a-z]{2,5})+$",
             message = "Invalid Email Format")
     private String email;
